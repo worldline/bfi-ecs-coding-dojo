@@ -5,6 +5,6 @@ package com.company.model;
  */
 public class Key {
 
-	private String fingerprint;
+
 
 }

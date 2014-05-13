@@ -5,19 +5,25 @@ package com.company.model;
  */
 public class Car {
 
-	private Engine engine;
-	
-	private Alarm alarm;
+    private Engine engine;
 
-	public Car (final Engine engine) {
-		this.engine = engine;
-	}
+    private Alarm alarm;
 
-	public void setAlarm(final Alarm alarm) {
-		this.alarm = alarm;
-	}
+    private Key expectedKey;
 
-	public String start() {
-		return engine.start();
-	}
+    public Car(final Key expectedKey, final Engine engine) {
+        this.engine = engine;
+        this.expectedKey = expectedKey;
+    }
+
+    public void setAlarm(final Alarm alarm) {
+        this.alarm = alarm;
+    }
+
+    public String start(final Key key) {
+        if (key != null && expectedKey.equals(key)) {
+            return engine.start();
+        }
+        return null;
+    }
 }
