@@ -1,0 +1,90 @@
+/**
+ * Coding Dojo TDD v0.1
+ *
+ * Copyright (c) 2013 Olivier Perez
+ */
+
+.fvt {
+	border-left: solid 0.6em #0071B5;
+}
+.fvt.title {
+	background: #0071B5;
+	border: none;
+	color: white;
+	text-shadow: 0.06em 0.06em 0 #0071B5, 0.07em 0.07em 0 #fff;
+}
+
+/* Live coding */
+.live-coding {
+	border-left: solid 0.6em #FFA500;
+}
+.live-coding.title {
+	background: #FFA500;
+	border: none;
+	color: white;
+	text-shadow: 0.06em 0.06em 0 #FFA500, 0.07em 0.07em 0 #fff;
+}
+
+/* Workshop */
+.workshop {
+	border-left: solid 0.6em #DD1B16;
+}
+.workshop.title {
+	background: #DD1B16;
+	border: none;
+	color: white;
+	text-shadow: 0.06em 0.06em 0 #DD1B16, 0.07em 0.07em 0 #fff;
+}
+/* TODO */
+.stay-tuned {
+	border-left: solid 0.6em #009900;
+}
+.stay-tuned.title {
+	background: #009900;
+	border: none;
+	color: white;
+	text-shadow: 0.06em 0.06em 0 #009900, 0.07em 0.07em 0 #fff;
+}
+.stay-tuned.publickey h1 {
+	margin-bottom: 0;
+}
+.stay-tuned.publickey pre {
+	font-size: 0.4em;
+}
+section.title h1 {
+	font-weight: bold;
+}
+
+#for-developers .euse {
+	display: none;
+}
+
+ol {
+	list-style-position: inside;
+}
+ul {
+	list-style: disc inside;
+}
+ul.nodisc{
+	list-style: none;
+}
+
+.lower {
+	font-size: 0.8em;
+}
+
+
+.pagination {
+	font-size: 1.00em;
+}
+pre code {
+  background-color: inherit;
+}
+
+pre .xml .javascript {
+  opacity: 1;
+}
+
+img.alignwithtext {
+	vertical-align:middle;
+}

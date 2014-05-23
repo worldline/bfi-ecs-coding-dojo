@@ -1,0 +1,18 @@
+{
+  "name": "codingdojo-tdd-01",
+  "author": "Olivier Perez <olivier.perez@worldline.com>",
+  "version": "0.1.0",
+  "main": "index.html",
+  "ignore": [
+    "**/.*",
+    "node_modules"
+  ],
+  "dependencies": {
+    "jquery": "~2.0.3",
+    "keymaster": "~1.6.1",
+    "hammerjs": "~1.0.6",
+    "normalize-css": "~2.1.0",
+    "font-awesome": "~4.1",
+    "highlightjs": "~7.5.0"
+  }
+}
