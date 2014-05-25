@@ -84,21 +84,32 @@
   
   <section class="live-coding">
     <h1><i class="fa fa-file-code-o"></i> Live coding</h1>
-	<span>Tout démarre par le Main</span>
+	<ul class="steps">
+		<li>Sans framework</li>
+		<li>A partir d'un Main</li>
+		<li>En voiture...</li>
+	</ul>
   </section>
   
   <section class="live-coding">
     <h1><i class="fa fa-file-code-o"></i> Live coding</h1>
-	<ol class="steps">
-		<li>TODO</li>
-	</ol>
+	<span>TODO : Mettre le MCD</span>
+  </section>
+  
+  <section class="live-coding">
+    <h1><i class="fa fa-file-code-o"></i> Live coding</h1>
+	<ul class="steps">
+		<li>feature 1 - Un moteur peut démarrer</li>
+		<li>feature 2 - Une voiture peut démarrer</li>
+		<li>Avez-vous testé la voiture ET le moteur ?</li>
+	</ul>
   </section>
   
   <!-- Workshop -->
   
   <section class="workshop">
-    <h1><i class="fa fa-car"></i> Atelier</h1>
-	<span>http://awl.li/codingdojo-tdd-01</span>
+    <h1><i class="fa fa-car"></i> Atelier - La clé</h1>
+    <span>TODO : Mettre le MCD (la clé en rouge)</span>
   </section>
   
   <!-- Stay-tuned -->
@@ -130,7 +141,8 @@
   <script>
     var ruban = new Ruban({
       pagination: true,
-	  bindClicks : true
+	  bindClicks : true,
+	  ratio: 16/9
     });
 	
 	$('a').click(function(evt){evt.stopPropagation()});
