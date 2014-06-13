@@ -11,6 +11,8 @@
 	background: #0071B5;
 	border: none;
 	color: white;
+}
+.fvt.title h1 {
 	text-shadow: 0.06em 0.06em 0 #0071B5, 0.07em 0.07em 0 #fff;
 }
 
@@ -22,6 +24,8 @@
 	background: #FFA500;
 	border: none;
 	color: white;
+}
+.live-coding.title h1{
 	text-shadow: 0.06em 0.06em 0 #FFA500, 0.07em 0.07em 0 #fff;
 }
 
@@ -33,24 +37,22 @@
 	background: #DD1B16;
 	border: none;
 	color: white;
+}
+.workshop.title h1{
 	text-shadow: 0.06em 0.06em 0 #DD1B16, 0.07em 0.07em 0 #fff;
 }
-/* TODO */
-.stay-tuned {
+
+/* Congratulations */
+.congratulations {
 	border-left: solid 0.6em #009900;
 }
-.stay-tuned.title {
+.congratulations.title {
 	background: #009900;
 	border: none;
 	color: white;
 	text-shadow: 0.06em 0.06em 0 #009900, 0.07em 0.07em 0 #fff;
 }
-.stay-tuned.publickey h1 {
-	margin-bottom: 0;
-}
-.stay-tuned.publickey pre {
-	font-size: 0.4em;
-}
+
 section.title h1 {
 	font-weight: bold;
 }
