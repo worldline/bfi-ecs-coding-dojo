@@ -92,19 +92,13 @@
 
   <section class="live-coding">
     <h1><i class="fa fa-file-code-o"></i> Live coding</h1>
-     <ul class="steps">
-       <li>Sans framework</li>
-       <li>A partir d'un Main</li>
-       <li>En voiture...
-         <img src="images/mcd_simple.png" alt="MCD - Simple" style="vertical-align:top"/>
-       </li>
-<!--
-// yuml.me
-// Car Diagram
-[Car|]++->[Engine|]
-[Car]<>->[Alarm|]
-[Key|]
--->
+    <ul class="steps">
+      <li>Sans framework</li>
+      <li>A partir d'un Main</li>
+      <li>En voiture...
+        <img src="images/mcd_simple.png" alt="MCD - Simple" style="vertical-align:top"/>
+      </li>
+      <!-- http://yuml.me/diagram/scruffy/class/edit/%5BCar|%5D++-%3E%5BEngine|%5D,%20%5BCar%5D%3C%3E-%3E%5BAlarm|%5D,%20%5BKey|%5D -->
     </ul>
   </section>
 
@@ -139,10 +133,11 @@
     </ul>
   </section>
 
-  <!-- Workshop -->
+  <!-- Atelier -->
+  <!-- Atelier - La clé -->
 
   <section class="workshop title">
-    <h1><i class="fa fa-car"></i> Atelier- La clé</h1>
+    <h1><i class="fa fa-car"></i> Atelier - La clé</h1>
     <div>Faites signe aux organisateurs.</div>
   </section>
 
@@ -176,6 +171,8 @@
       <li>Une mauvaise clé ne démarrera pas la voiture.</li>
     </ul>
   </section>
+
+  <!-- Atelier - L'alarme -->
 
   <section class="workshop title">
     <h1><i class="fa fa-car"></i> Atelier - L'alarme</h1>
@@ -223,12 +220,63 @@
     </ul>
   </section>
 
+  <!-- TODO : Atelier - Les outils -->
+
   <section class="workshop title">
     <h1><i class="fa fa-car"></i> Atelier - Les outils</h1>
     <div>Faites signe aux organisateurs.</div>
   </section>
 
-  <!-- TODO : Atelier - Les outils -->
+  <section class="workshop">
+    <h1><i class="fa fa-car"></i> Atelier - Les outils</h1>
+    <strong>Test unitaire - Objective-C - XCTest</strong><br/>
+    <pre><code>// File : EngineUnitTest.m
+#import &lt;XCTest/XCTest.h&gt
+
+@interface EngineTest : XCTest
+@end
+
+@implementation EngineTest
+
+- (void) setUp { [super setUp]; }
+- (void) tearDown { [super tearDown]; }
+- (void) shouldStartEngine { /* ... */ }
+
+@end</code></pre>
+  </section>
+
+  <section class="workshop">
+    <h1><i class="fa fa-car"></i> Atelier - Les outils</h1>
+    <strong>Test unitaire - Java - JUnit</strong><br/>
+    <pre><code class="java">// File : EngineUnitTest.java
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+public class EngineTest {
+
+@Before
+public void setUp { /*...*/ }
+@After
+public void tearDown { /*...*/ }
+@Test
+public void shouldStartEngine { /* ... */ }
+
+}</code></pre>
+  </section>
+
+  <section class="workshop">
+    <h1><i class="fa fa-car"></i> Atelier - Les outils</h1>
+    <strong>Test unitaire - Objective-C - OCMockito</strong><br/>
+    <pre><code>...</code></pre>
+  </section>
+
+  <section class="workshop">
+    <h1><i class="fa fa-car"></i> Atelier - Les outils</h1>
+    <strong>Test unitaire - Java - Mockito</strong><br/>
+    <pre><code class="java">...</code></pre>
+  </section>
+
 
   <!-- Congratulations -->
 
