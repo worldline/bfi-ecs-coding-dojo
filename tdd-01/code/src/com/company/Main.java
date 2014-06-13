@@ -6,18 +6,22 @@ import com.company.model.Key;
 
 public class Main {
 
-	public static void main(String[] args) {
-		should_start_engine();
-		should_start_engine_while_starting_a_car();
+    public static void main(String[] args) {
+        // Step 1
+        should_start_engine();
+        should_start_a_car_INTEGRATION();
+        should_start_engine_while_starting_a_car();
+
+        // Step 2
+        should_start_engine_with_matching_key();
         should_not_start_engine_without_key();
         should_not_start_engine_without_matching_key();
-        should_start_engine_with_matching_key();
-	}
+    }
 
     private static void should_not_start_engine_without_key() {
         // Given
         FakeEngine engine = new FakeEngine();
-        Car car = new Car(new Key(),engine);
+        Car car = new Car(new Key(), engine);
 
         // When
         car.start(null);
@@ -41,83 +45,74 @@ public class Main {
     }
 
     private static void should_start_engine_with_matching_key() {
-        // GIVEN
+        // Given
         FakeEngine fakeEngine = new FakeEngine();
         Key matchingKey = new Key();
         Car car = new Car(matchingKey, fakeEngine);
 
-        // WHEN
+        // When
         car.start(matchingKey);
 
-        // THEN
+        // Then
         check(fakeEngine.isStartMethodCalled(), "Should start engine when starting car with the matching key");
-        class Toto {
-            public Integer a;
-            public Double b;
-            public Long c;
-            public Float d;
-        }
-
-        Toto toto = new Toto();
-        System.out.println(toto.a);
-        System.out.println(toto.b);
-        System.out.println(toto.c);
-        System.out.println(toto.d);
     }
 
-	private static void should_start_engine() {
-		Engine engine = new Engine();
+    private static void should_start_engine() {
+        // Given
+        Engine engine = new Engine();
 
-		String sound = engine.start();
+        // When
+        String sound = engine.start();
 
-		check("vrooom".equals(sound), "Démarrage du moteur");
-	}
+        // Then
+        check("vrooom".equals(sound), "Engine should start");
+    }
 
-	private static void should_start_a_car_INTEGRATION() {
-		// GIVEN
-		Car car = new Car(new Key(), new Engine());
+    private static void should_start_a_car_INTEGRATION() {
+        // Given
         Key key = new Key();
+        Car car = new Car(key, new Engine());
 
-		// WHEN
-		String sound = car.start(key);
+        // When
+        String sound = car.start(key);
 
-		// THEN
-		check("vrooom".equals(sound), "Démarrage du moteur lors du démarrage de la voiture");
-	}
+        // Then
+        check("vrooom".equals(sound), "Engine should say vrooom when car starts");
+    }
 
-	private static void should_start_engine_while_starting_a_car() {
-		// GIVEN
-		FakeEngine engine = new FakeEngine();
+    private static void should_start_engine_while_starting_a_car() {
+        // Given
+        FakeEngine engine = new FakeEngine();
         Key key = new Key();
         Car car = new Car(key, engine);
 
-		// WHEN
-		car.start(key);
+        // When
+        car.start(key);
 
-		// THEN
-		check(engine.isStartMethodCalled(), "Démarrage du moteur lors du démarrage de la voiture");
-	}
+        // Then
+        check(engine.isStartMethodCalled(), "When car is starting, it should start engine too");
+    }
 
-	private static void check(final boolean equation, final String message) {
-		if (equation) {
-			System.out.println("OK - " + message);
-		} else {
-			System.out.println("FAIL - " + message);
-		}
-	}
+    private static void check(final boolean equation, final String message) {
+        if (equation) {
+            System.out.println("OK - " + message);
+        } else {
+            System.out.println("FAIL - " + message);
+        }
+    }
 
-	private static class FakeEngine extends Engine {
+    private static class FakeEngine extends Engine {
 
-		private boolean started;
+        private boolean started;
 
-		public boolean isStartMethodCalled() {
-			return started;
-		}
+        public boolean isStartMethodCalled() {
+            return started;
+        }
 
-		public String start() {
-			started = true;
-			return null;
-		}
+        public String start() {
+            started = true;
+            return null;
+        }
 
-	}
+    }
 }
