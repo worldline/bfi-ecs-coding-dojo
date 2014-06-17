@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "model/Engine.h"
+#import "model/Car.h"
 
 int main(int argc, const char * argv[])
 {
@@ -24,6 +25,17 @@ int main(int argc, const char * argv[])
         } else {
             NSLog(@"Failed");
         }
+        
+        // Step2
+        Car *car = [[Car alloc]initWithEngine:engine];
+        
+        NSString *carsound = [car start];
+        if ([carsound isEqualTo:@"vrooom"]) {
+            NSLog(@"Success");
+        } else {
+            NSLog(@"Failed");
+        }
+        
     }
     return 0;
 }
