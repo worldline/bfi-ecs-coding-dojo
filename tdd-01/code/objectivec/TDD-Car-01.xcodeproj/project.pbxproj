@@ -362,6 +362,10 @@
 		73BE47B8194F1D9A0002F2C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TDD-Car-01/TDD-Car-01-Prefix.pch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -371,6 +375,10 @@
 		73BE47B9194F1D9A0002F2C4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TDD-Car-01/TDD-Car-01-Prefix.pch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -430,6 +438,7 @@
 				73BE47B9194F1D9A0002F2C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		73BE47CC194F1E910002F2C4 /* Build configuration list for PBXNativeTarget "TDD-Car-01 Tests" */ = {
 			isa = XCConfigurationList;
@@ -438,6 +447,7 @@
 				73BE47CE194F1E910002F2C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

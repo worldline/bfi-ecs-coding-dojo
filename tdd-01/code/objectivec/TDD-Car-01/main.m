@@ -12,6 +12,7 @@
 
 void should_start_engine();
 void should_start_car_INTEGRATION();
+void assertTrue(bool condition, NSString* message);
 
 int main(int argc, const char * argv[])
 {
@@ -33,21 +34,21 @@ int main(int argc, const char * argv[])
 void should_start_engine() {
     Engine *engine = [[Engine alloc] init];
     NSString *sound = [engine start];
-    if ([sound isEqualTo:@"vrooom"]) {
-        NSLog(@"Engine starts with success");
-    } else {
-        NSLog(@"Engine failed at start");
-    }
+    assertTrue([sound isEqualTo:@"vrooom"], @"Engine should start");
 }
 
 void should_start_car_INTEGRATION() {
     Engine *engine = [[Engine alloc] init];
     Car *car = [[Car alloc]initWithEngine:engine];
     
-    NSString *carsound = [car start];
-    if ([carsound isEqualTo:@"vrooom"]) {
-        NSLog(@"Car and its engine start with success");
+    NSString *sound = [car start];
+    assertTrue([sound isEqualTo:@"vrooom"], @"Car and its engine should start");
+}
+
+void assertTrue(bool condition, NSString* message) {
+    if (condition) {
+        NSLog([NSString stringWithFormat:@"%@ : SUCCESS", message]);
     } else {
-        NSLog(@"Car and its engine failed at start");
+        NSLog([NSString stringWithFormat:@"%@ : FAIL", message]);
     }
 }
