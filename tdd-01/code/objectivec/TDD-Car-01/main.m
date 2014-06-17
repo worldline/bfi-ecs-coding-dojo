@@ -10,6 +10,9 @@
 #import "model/Engine.h"
 #import "model/Car.h"
 
+void should_start_engine();
+void should_start_car_INTEGRATION();
+
 int main(int argc, const char * argv[])
 {
     @autoreleasepool {
@@ -18,25 +21,33 @@ int main(int argc, const char * argv[])
         NSLog(@"Hello, World!");
         
         // Step 1
-        Engine *engine = [[Engine alloc] init];
-        NSString *sound = [engine start];
-        if ([sound isEqualTo:@"vrooom"]) {
-            NSLog(@"Success");
-        } else {
-            NSLog(@"Failed");
-        }
+        should_start_engine();
         
         // Step2
-        Car *car = [[Car alloc]initWithEngine:engine];
-        
-        NSString *carsound = [car start];
-        if ([carsound isEqualTo:@"vrooom"]) {
-            NSLog(@"Success");
-        } else {
-            NSLog(@"Failed");
-        }
+        should_start_car_INTEGRATION();
         
     }
     return 0;
 }
 
+void should_start_engine() {
+    Engine *engine = [[Engine alloc] init];
+    NSString *sound = [engine start];
+    if ([sound isEqualTo:@"vrooom"]) {
+        NSLog(@"Engine starts with success");
+    } else {
+        NSLog(@"Engine failed at start");
+    }
+}
+
+void should_start_car_INTEGRATION() {
+    Engine *engine = [[Engine alloc] init];
+    Car *car = [[Car alloc]initWithEngine:engine];
+    
+    NSString *carsound = [car start];
+    if ([carsound isEqualTo:@"vrooom"]) {
+        NSLog(@"Car and its engine start with success");
+    } else {
+        NSLog(@"Car and its engine failed at start");
+    }
+}
