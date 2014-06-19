@@ -12,9 +12,6 @@
 	border: none;
 	color: white;
 }
-.fvt.title h1 {
-	text-shadow: 0.06em 0.06em 0 #0071B5, 0.07em 0.07em 0 #fff;
-}
 
 /* Live coding */
 .live-coding {
@@ -24,9 +21,6 @@
 	background: #FFA500;
 	border: none;
 	color: white;
-}
-.live-coding.title h1{
-	text-shadow: 0.06em 0.06em 0 #FFA500, 0.07em 0.07em 0 #fff;
 }
 
 /* Workshop */
@@ -38,9 +32,6 @@
 	border: none;
 	color: white;
 }
-.workshop.title h1{
-	text-shadow: 0.06em 0.06em 0 #DD1B16, 0.07em 0.07em 0 #fff;
-}
 
 /* Congratulations */
 .congratulations {
@@ -50,7 +41,6 @@
 	background: #009900;
 	border: none;
 	color: white;
-	text-shadow: 0.06em 0.06em 0 #009900, 0.07em 0.07em 0 #fff;
 }
 
 section.title h1 {
