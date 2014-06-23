@@ -1,11 +1,5 @@
-npm-debug.log
-
-/tdd-01/presentation/bower_components
-/tdd-01/presentation/node_modules
-/tdd-01/presentation/css/ruban-print.css
-/tdd-01/presentation/css/ruban-print.min.css
-/tdd-01/presentation/css/ruban.css
-/tdd-01/presentation/css/ruban.min.css
-/tdd-01/presentation/js/ruban.js
-/tdd-01/presentation/js/ruban.min.js
-**/.idea
+.idea
+.settings
+.classpath
+.project
+*.class

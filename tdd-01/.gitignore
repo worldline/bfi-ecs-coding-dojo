@@ -1,0 +1,11 @@
+npm-debug.log
+
+/presentation/bower_components
+/presentation/node_modules
+/presentation/css/ruban-print.css
+/presentation/css/ruban-print.min.css
+/presentation/css/ruban.css
+/presentation/css/ruban.min.css
+/presentation/js/ruban.js
+/presentation/js/ruban.min.js
+
