@@ -4,6 +4,7 @@ public class Car {
 
     private Engine engine;
     private final String fingerprint;
+    private Alarm alarm;
 
     public Car(Engine engine, String fingerprint) {
         this.engine = engine;
@@ -11,15 +12,23 @@ public class Car {
     }
 
     public String start(Key key) {
-        if (key != null && isKeyValid(key)) {
+        if (key == null) {
+            return callAlarm();
+
+        } else if (fingerprint.equals(key.getFingerprint())) {
             return engine.start();
+
         } else {
             return "";
         }
     }
 
-    private boolean isKeyValid(Key key) {
-        return fingerprint.equals(key.getFingerprint());
+    private String callAlarm() {
+        return alarm != null ? alarm.makeNoise() : "";
+    }
+
+    public void setAlarm(Alarm alarm) {
+        this.alarm = alarm;
     }
 
 }
