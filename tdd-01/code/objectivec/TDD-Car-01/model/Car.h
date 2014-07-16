@@ -7,13 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Engine.h"
 
 @interface Car : NSObject
-{
-    Engine* engine;
-}
-- (id)initWithEngine:(Engine*)engine;
-- (NSString*) start;
 
 @end
