@@ -207,7 +207,7 @@
   <section class="workshop">
     <h1><i class="fa fa-car"></i> Atelier - Les outils</h1>
     <strong>Test unitaire - Objective-C - XCTest</strong><br/>
-    <pre><code>// File : EngineUnitTest.m
+    <pre><code class="objectivec">// File : EngineUnitTest.m
 #import &lt;XCTest/XCTest.h&gt
 
 @interface EngineTest : XCTest
@@ -245,13 +245,31 @@ public void shouldStartEngine { /* ... */ }
   <section class="workshop">
     <h1><i class="fa fa-car"></i> Atelier - Les outils</h1>
     <strong>Test unitaire - Objective-C - OCMockito</strong><br/>
-    <pre><code>...</code></pre>
+    <pre><code class="objectivec">// mock creation
+NSMutableArray *mockArray = mock([NSMutableArray class]);
+
+// using mock object
+[mockArray addObject:@"one"];
+[mockArray removeAllObjects];
+
+// verification
+[verify(mockArray) addObject:@"one"];
+[verify(mockArray) removeAllObjects];</code></pre>
   </section>
 
   <section class="workshop">
     <h1><i class="fa fa-car"></i> Atelier - Les outils</h1>
     <strong>Test unitaire - Java - Mockito</strong><br/>
-    <pre><code class="java">...</code></pre>
+    <pre><code class="java">// mock creation
+ArrayList mockedList = mock(ArrayList.class);
+
+// using mock object
+mockedList.add("one");
+mockedList.clear();
+
+// verification
+verify(mockedList).add("one");
+verify(mockedList).clear();</code></pre>
   </section>
 
 
