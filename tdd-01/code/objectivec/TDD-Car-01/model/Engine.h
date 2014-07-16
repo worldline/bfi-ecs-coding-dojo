@@ -10,4 +10,6 @@
 
 @interface Engine : NSObject
 
+- (NSString*) start;
+
 @end
