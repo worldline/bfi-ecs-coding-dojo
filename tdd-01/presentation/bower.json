@@ -3,6 +3,7 @@
   "author": "Olivier Perez <olivier.perez@worldline.com>",
   "version": "0.1.0",
   "main": "index.html",
+  "private": true,
   "ignore": [
     "**/.*",
     "node_modules"
